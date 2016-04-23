@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="BarOMeter" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +17,37 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <view contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="3qF-dr-xqn" customClass="GaugeView" customModule="BarOMeter" customModuleProvider="target">
+                                <rect key="frame" x="20" y="20" width="560" height="580"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Calibrating..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cCs-fL-6C5">
+                                        <rect key="frame" x="190" y="8" width="180" height="30"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </view>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="3qF-dr-xqn" secondAttribute="trailing" id="Kss-Uv-BO4"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="3qF-dr-xqn" secondAttribute="bottom" id="QsB-RV-ff2"/>
+                            <constraint firstItem="3qF-dr-xqn" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="k7b-Ka-ML8"/>
+                            <constraint firstItem="cCs-fL-6C5" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="pWs-Cz-smK"/>
+                            <constraint firstItem="cCs-fL-6C5" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="siV-7I-uCS"/>
+                            <constraint firstItem="3qF-dr-xqn" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="zMY-eq-4Gg"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="gaugeView" destination="3qF-dr-xqn" id="oAY-wB-BlL"/>
+                        <outlet property="pressureLabel" destination="cCs-fL-6C5" id="dZI-wW-REA"/>
+                        <outlet property="pressureView" destination="8bC-Xf-vdC" id="qTy-zS-U4y"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="926" y="495"/>
         </scene>
     </scenes>
 </document>

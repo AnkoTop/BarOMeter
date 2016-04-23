@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A4369D611CC929F20069F80B /* GaugeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4369D601CC929F20069F80B /* GaugeView.swift */; };
+		A4369D651CC9FEA60069F80B /* BaroStyleKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4369D641CC9FEA60069F80B /* BaroStyleKit.swift */; };
 		A44C0C931C85C53C0066DEBE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44C0C921C85C53C0066DEBE /* AppDelegate.swift */; };
 		A44C0C951C85C53C0066DEBE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44C0C941C85C53C0066DEBE /* ViewController.swift */; };
 		A44C0C981C85C53C0066DEBE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A44C0C961C85C53C0066DEBE /* Main.storyboard */; };
@@ -34,6 +36,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A4369D601CC929F20069F80B /* GaugeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GaugeView.swift; sourceTree = "<group>"; };
+		A4369D641CC9FEA60069F80B /* BaroStyleKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaroStyleKit.swift; sourceTree = "<group>"; };
 		A44C0C8F1C85C53C0066DEBE /* BarOMeter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BarOMeter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A44C0C921C85C53C0066DEBE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A44C0C941C85C53C0066DEBE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -97,12 +101,14 @@
 		A44C0C911C85C53C0066DEBE /* BarOMeter */ = {
 			isa = PBXGroup;
 			children = (
+				A4369D641CC9FEA60069F80B /* BaroStyleKit.swift */,
 				A44C0C921C85C53C0066DEBE /* AppDelegate.swift */,
 				A44C0C941C85C53C0066DEBE /* ViewController.swift */,
 				A44C0C961C85C53C0066DEBE /* Main.storyboard */,
 				A44C0C991C85C53C0066DEBE /* Assets.xcassets */,
 				A44C0C9B1C85C53C0066DEBE /* LaunchScreen.storyboard */,
 				A44C0C9E1C85C53C0066DEBE /* Info.plist */,
+				A4369D601CC929F20069F80B /* GaugeView.swift */,
 			);
 			path = BarOMeter;
 			sourceTree = "<group>";
@@ -257,6 +263,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				A44C0C951C85C53C0066DEBE /* ViewController.swift in Sources */,
+				A4369D611CC929F20069F80B /* GaugeView.swift in Sources */,
+				A4369D651CC9FEA60069F80B /* BaroStyleKit.swift in Sources */,
 				A44C0C931C85C53C0066DEBE /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -482,6 +490,7 @@
 				A44C0CB91C85C53C0066DEBE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A44C0CBA1C85C53C0066DEBE /* Build configuration list for PBXNativeTarget "BarOMeterTests" */ = {
 			isa = XCConfigurationList;
@@ -490,6 +499,7 @@
 				A44C0CBC1C85C53C0066DEBE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A44C0CBD1C85C53C0066DEBE /* Build configuration list for PBXNativeTarget "BarOMeterUITests" */ = {
 			isa = XCConfigurationList;
@@ -498,6 +508,7 @@
 				A44C0CBF1C85C53C0066DEBE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
